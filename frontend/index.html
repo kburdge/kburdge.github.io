@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Rubin Light‑curve Viewer</title>
+<script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" rel="stylesheet">
+</head>
+<body class="section">
+  <div class="container">
+    <h1 class="title">Rubin Light‑curve Viewer</h1>
+
+    <form id="frm" class="box">
+      <div class="field">
+        <label class="label">RA (deg)</label>
+        <div class="control">
+          <input class="input" type="number" step="0.000001" id="ra" required>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Dec (deg)</label>
+        <div class="control">
+          <input class="input" type="number" step="0.000001" id="dec" required>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Radius (arcsec, optional)</label>
+        <div class="control">
+          <input class="input" type="number" step="0.1" id="radius" placeholder="1.0">
+        </div>
+      </div>
+      <button class="button is-link">Fetch</button>
+    </form>
+
+    <div id="msg"></div>
+    <div id="plot" style="height:600px;"></div>
+  </div>
+<script src="lc.js"></script>
+</body>
+</html>
